@@ -22,7 +22,7 @@ void loop() {
   int moisture = analogRead(SOIL_PIN);
 
   // Convert to percentage
-  int moisturePercent = map(moisture, 4095, 0, 0, 100);
+  int moisturePercent = map(moisture, 4095, 1300, 0, 100); //changed as when testing the soil moisture this is around the max value it when fully submerged can give back not sure why
   moisturePercent = constrain(moisturePercent, 0, 100);
 
   // Print to Serial
